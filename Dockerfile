@@ -7,4 +7,5 @@ FROM amazoncorretto:17
 USER nobody
 WORKDIR /spc
 COPY --from=build spring-petclinic/target/spring-petclinic-3.3.0-SNAPSHOT.jar /spc/spring-petclinic.jar
+EXPOSE 8080
 CMD [ "java","-jar","spring-petclinic.jar" ]
